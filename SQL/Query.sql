@@ -137,7 +137,7 @@ GO
 CREATE VIEW dbo.good_category_pairs
 AS
 SELECT 
-	g.[name],
+    g.[name],
     g2cp.category_name,
     g2cp.parent_category_name 
 FROM dbo.good g
