@@ -142,14 +142,14 @@ SELECT
     g2cp.parent_category_name 
 FROM dbo.good g
 LEFT JOIN(
-	SELECT 
+    SELECT 
         g2c.good_id,
         gc.[name] category_name,
         gcp.[name] parent_category_name
     FROM dbo.good2category g2c
-	JOIN dbo.good_category gc
+    JOIN dbo.good_category gc
         ON g2c.category_id = gc.id
-	JOIN dbo.good_category gcp
+    JOIN dbo.good_category gcp
         ON gc.parent_id = gcp.id
 ) g2cp
 ON g.id = g2cp.good_id;
