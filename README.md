@@ -9,4 +9,4 @@
 
 > 📸 [Скриншот](https://github.com/rozhkovsvyat/Project22/assets/71471748/e996b26e-caec-4a82-bb00-547fe4ef0641)
 > 
-> 🔗 [Query.sql](https://github.com/rozhkovsvyat/Project22/blob/master/Project%2022/Query.sql)
+> 🔗 [Query.sql](https://github.com/rozhkovsvyat/Project22/blob/master/SQL/Query.sql)
