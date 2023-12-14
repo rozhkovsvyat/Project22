@@ -143,10 +143,10 @@ SELECT
 FROM dbo.good g
 LEFT JOIN(
 	SELECT 
-		g2c.good_id,
-		gc.[name] category_name,
+        g2c.good_id,
+        gc.[name] category_name,
         gcp.[name] parent_category_name
-	FROM dbo.good2category g2c
+    FROM dbo.good2category g2c
 	JOIN dbo.good_category gc
         ON g2c.category_id = gc.id
 	JOIN dbo.good_category gcp
@@ -159,12 +159,12 @@ GO
 SELECT
     ROW_NUMBER() OVER(ORDER BY [name]) #,
     [name] Tea,
-	CASE 
-		WHEN category_name IS NOT NULL
+    CASE 
+        WHEN category_name IS NOT NULL
         THEN category_name ELSE ''
-	END Category,
-	CASE 
-		WHEN parent_category_name IS NOT NULL
+    END Category,
+    CASE 
+        WHEN parent_category_name IS NOT NULL
         THEN parent_category_name ELSE ''
-	END [Type]
+    END [Type]
 FROM dbo.good_category_pairs;
